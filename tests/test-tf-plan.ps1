@@ -14,7 +14,7 @@ if ($subnet -and ($subnet.Count -eq 1 )) {
 } else { 
     throw "`u{1F635} Unable to find VPC subnet. Please make sure that you added a subnet (and only one subnet) to the task module and try again. "
 }
-if ($subnet.change.after.tags.Name -eq "grafana") { 
+if ($subnet.change.after.tags.Name -eq "grafana") {
     Write-Output "`u{2705} Checking if subnet has a name - OK. "
 } else { 
     throw "`u{1F635} Unable to validate subnet name. Please make sure that you added a 'Name' tag with value 'grafana' for the subnet and try again. "
